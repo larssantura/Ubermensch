@@ -38,7 +38,6 @@ const Movie = ({ movie, simillarMovies, err }) => {
               padding={3}
               fontSize={[14, 20, 30, 30]}
               className="gradient"
-              border="2px solid #121212"
               width={["100vw", "100vw", "80vw", "80vw"]}
               mt="60px"
             >
@@ -213,7 +212,6 @@ const Movie = ({ movie, simillarMovies, err }) => {
               padding={3}
               fontSize={30}
               className="gradient"
-              border="2px solid #121212"
               margin="30px 0"
               mt="60px"
             >
@@ -239,7 +237,6 @@ const Movie = ({ movie, simillarMovies, err }) => {
                   padding={3}
                   fontSize={30}
                   className="gradient"
-                  border="2px solid #121212"
                 >
                   Suggested Movies
                 </Text>

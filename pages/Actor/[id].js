@@ -11,7 +11,7 @@ const Actor = ({ data }) => {
     <Box
       height="max-content"
       width="100vw"
-      backgroundImage="/Images/stars.png"
+      backgroundImage="/Images/stars.PNG"
       display="flex"
       justifyContent="center"
       alignItems={"center"}

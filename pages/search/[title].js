@@ -12,7 +12,7 @@ const Search = ({ data, title, err }) => {
   }
   return (
     <Box
-      backgroundImage="/Images/stars.png"
+      backgroundImage="/Images/stars.PNG"
       textAlign="center"
       width="100vw"
       maxHeight="fit-content"

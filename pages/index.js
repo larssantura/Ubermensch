@@ -20,16 +20,15 @@ const Home = () => {
     >
       <Center>
         {" "}
-        <Box width="100vw" height="100vh" position="relative">
-          <Image
-            src="/Images/headerImg.jpg"
-            alt="headerimg"
-            objectFit="cover"
-            layout="fill"
-            className="dark2"
-            priority
-          />
-        </Box>
+        <Box
+          width="100vw"
+          height="100vh"
+          position="relative"
+          backgroundImage="/Images/headerImg.jpg"
+          backgroundSize="cover"
+          backgroundPosition="center"
+          className="dark2"
+        ></Box>
         <Box position="absolute">
           <Box
             color="white"
@@ -76,7 +75,7 @@ const Home = () => {
           minWidth="100vw"
           minHeight="55vh"
           alignItems="center"
-          backgroundImage="/Images/stars.png"
+          backgroundImage="/Images/stars.PNG"
           pl="5"
           textAlign="center"
           justifyContent="center"
@@ -129,13 +128,12 @@ const Home = () => {
         padding={3}
         fontSize={30}
         className="gradient"
-        border="2px solid #121212"
       >
         Highest rated
       </Text>
       <Box overflow="hidden">
         <Box
-          backgroundImage="/Images/stars.png"
+          backgroundImage="/Images/stars.PNG"
           backgroundAttachment="fixed"
           display="flex"
           flexDirection="row"
