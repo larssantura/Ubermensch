@@ -1,0 +1,132 @@
+@font-face {
+  font-family: "sfPro";
+  src: url("/fonts/sfPro.woff") format("woff");
+  font-weight: 300;
+}
+@font-face {
+  font-family: "sfPro";
+  src: url("/fonts/sfProMd.woff") format("woff");
+  font-weight: 500;
+}
+@import url("https://fonts.googleapis.com/css2?family=Bangers&family=Oleo+Script:wght@700&display=swap");
+* {
+  font-family: "sfPro", sans-serif;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-weight: 300;
+  background-color: black !important;
+  overflow-x: hidden !important;
+}
+.fixed {
+  background-attachment: fixed;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+.blur {
+  filter: blur(45px);
+}
+.pointer {
+  cursor: pointer;
+}
+.borderRadius {
+  border-radius: 20px;
+}
+.dark {
+  filter: brightness(40%) blur(1px);
+  transition: 0.3s;
+}
+.dark2 {
+  filter: brightness(40%);
+}
+.white {
+  color: white !important;
+}
+.right-arrow {
+  cursor: pointer;
+  position: fixed;
+  top: 50%;
+  right: 1%;
+  color: white;
+  transform: translateY(-50%);
+}
+.right-arrow:active {
+  color: #0088a9;
+}
+.left-arrow {
+  cursor: pointer;
+  position: fixed;
+  color: #ffffff;
+  top: 50%;
+  left: 1%;
+  transform: translateY(-50%);
+}
+.left-arrow:active {
+  color: #0088a9;
+}
+.center {
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.hidden {
+  overflow: hidden;
+}
+span {
+  color: #00bceb;
+}
+.sfPro {
+  font-family: "sfPro";
+  font-weight: 500;
+}
+.Stars {
+  background-image: url("/Images/Capture.PNG") !important;
+}
+/* .circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+} */
+.p {
+  border-radius: 5rem;
+  padding: 1px 15px;
+  background-color: rgba(126, 6, 6, 0.658);
+}
+* {
+  box-sizing: border-box;
+}
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background-color: #121212;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: #303030;
+}
+.gradient {
+  background: linear-gradient(
+    227deg,
+    rgba(0, 188, 235, 1) 0%,
+    rgba(0, 109, 136, 1) 38%,
+    rgba(0, 0, 0, 1) 100%
+  );
+  text-shadow: 0 0 10px rgb(0, 0, 0);
+}
+.nobar ::-webkit-scrollbar {
+  height: 0 !important;
+  width: 0;
+}
+::selection {
+  background-color: #0088a9;
+}
