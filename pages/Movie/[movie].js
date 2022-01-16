@@ -26,7 +26,7 @@ const Movie = ({ movie, simillarMovies, err }) => {
         <Box
           height="max-content"
           width="100vw"
-          backgroundImage="/Images/stars.png"
+          backgroundImage="/Images/stars.PNG"
           color="white"
           overflow="hidden"
         >
