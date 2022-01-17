@@ -6,8 +6,7 @@ import MovieCard from "../../Components/Card/MovieCard";
 import NotFound from "../404";
 
 const Search = ({ data, title, err }) => {
-  console.log(data);
-  if (err) {
+  if (err || !title || !data) {
     <NotFound />;
   }
   return (
@@ -28,7 +27,7 @@ const Search = ({ data, title, err }) => {
           <Text color="white" fontSize={25} padding={10} pt={20}>
             Results for: <span>{title}</span>
           </Text>
-          {!data ? (
+          {data.length === 0 ? (
             <Text fontSize={30} color="white" zIndex={10} mt={50}>
               Nothing found :( <br />
               try again using different keywords
@@ -54,8 +53,6 @@ const Search = ({ data, title, err }) => {
           )}
         </Box>
       </motion.div>
-
-      {console.log(data)}
     </Box>
   );
 };
@@ -63,7 +60,10 @@ const Search = ({ data, title, err }) => {
 export default Search;
 
 export async function getServerSideProps(context) {
-  const title = context.params.title.replaceAll("_", " ");
+  const title = context.params.title.includes("_")
+    ? context.params.title.replaceAll("_", " ")
+    : context.params.title;
+
   let err;
   const res = await fetch(
     `https://api.themoviedb.org/3/search/movie?api_key=67a9442bd256e2f4ab4e22d13b864f8c&language=en-US&query=${title}&page=1`
@@ -72,11 +72,12 @@ export async function getServerSideProps(context) {
     return;
   });
 
-  const data = !err ? await res.json() : null;
+  const data = !err ? await res.json() : [];
+
   return {
     props: {
-      data: data.results.length > 0 ? data.results : null,
-      title: title,
+      data: data.results ? data.results : [],
+      title: title ? title : null,
       err: err ? err : null,
     },
   };

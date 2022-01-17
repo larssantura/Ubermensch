@@ -35,7 +35,7 @@ const Navbar = () => {
   // if (clicked === true) {
   //   setClicked(false);
   // }
-  console.log(path);
+
   const keyDownHandeler = (e) => {
     if (e.key === "Enter" && search) {
       Router.push(`/search/${search.replaceAll(" ", "_")}`);

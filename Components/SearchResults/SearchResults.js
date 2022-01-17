@@ -5,7 +5,7 @@ import { useRef } from "react";
 import SearchResult from "../SearchResult/SearchResult";
 
 const SearchResults = ({ search, enter }) => {
-  const [results, setResults] = useState("");
+  const [results, setResults] = useState([]);
   const [clicked, setClicked] = useState(true);
   const [showResults, setShowResults] = useState(false);
 
@@ -21,7 +21,7 @@ const SearchResults = ({ search, enter }) => {
         return res.json();
       })
       .then((t) => {
-        setResults(t.results);
+        setResults(t.results ? t.results : []);
 
         if (results) {
           setShowResults(true);
@@ -48,7 +48,7 @@ const SearchResults = ({ search, enter }) => {
 
   return (
     <div>
-      {showResults && search ? (
+      {showResults && search && results.length > 0 ? (
         <>
           <Box
             fontSize="30"
