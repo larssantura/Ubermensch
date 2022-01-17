@@ -12,6 +12,7 @@ const SearchResult = ({ image, title, id }) => {
       <>
         {title ? (
           <Box
+            zIndex={999}
             display="flex"
             flexDirection="row"
             backgroundColor="#242424"

@@ -60,7 +60,7 @@ const SearchResults = ({ search, enter }) => {
             overflowX="hidden"
             className="center"
             position="fixed"
-            zIndex="20"
+            zIndex="999"
             padding="4"
             top="240px"
           >

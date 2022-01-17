@@ -141,7 +141,6 @@ const Home = () => {
           minWidth="100vw"
           minHeight="55vh"
           alignItems="center"
-          pl="5"
           pt={10}
           pb={10}
           position="relative"
