@@ -60,7 +60,7 @@ const Home = () => {
               transition={{ delay: 1.5, duration: 1 }}
               className="p"
             >
-              Your Gateway to Anther World
+              Your Gateway to Another World
             </motion.h1>
           </Box>
         </Box>

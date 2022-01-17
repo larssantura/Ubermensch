@@ -66,7 +66,7 @@ export async function getServerSideProps(context) {
 
   let err;
   const res = await fetch(
-    `https://api.themoviedb.org/3/search/movie?api_key=67a9442bd256e2f4ab4e22d13b864f8c&language=en-US&query=${title}&page=1`
+    `https://api.themoviedb.org/3/search/movie?api_key=${process.env.API_KEY}&language=en-US&query=${title}&page=1`
   ).catch(() => {
     err = true;
     return;
