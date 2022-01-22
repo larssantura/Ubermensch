@@ -14,9 +14,7 @@ const SearchResults = ({ search, enter }) => {
       setShowResults(false);
     }
 
-    fetch(
-      `https://api.themoviedb.org/3/search/movie?api_key=67a9442bd256e2f4ab4e22d13b864f8c&language=en-US&query=${search}&page=1`
-    )
+    fetch(`/api/search/${search}`)
       .then((res) => {
         return res.json();
       })

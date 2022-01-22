@@ -11,9 +11,7 @@ const CrewPage = ({ id }) => {
   const [crew, setCrew] = useState([]);
   const [limit, setLimit] = useState(true);
   useEffect(() => {
-    fetch(
-      `https://api.themoviedb.org/3/movie/${id}/credits?api_key=${process.env.API_KEY}&language=en-US`
-    )
+    fetch(`/api/cast/${id}`)
       .then((res) => {
         return res.json();
       })

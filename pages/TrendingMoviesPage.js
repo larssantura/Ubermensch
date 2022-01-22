@@ -7,28 +7,13 @@ import { Icon } from "@iconify/react";
 const TrendingMoviesPage = ({ type }) => {
   const [movies, setMovies] = useState();
   useEffect(() => {
-    if (type === "trending") {
-      fetch(
-        `https://api.themoviedb.org/3/trending/movie/week?api_key=${process.env.API_KEY}`
-      )
-        .then((res) => {
-          return res.json();
-        })
-        .then((f) => {
-          setMovies(f.results);
-        });
-    }
-    if (type === "top_rated") {
-      fetch(
-        `https://api.themoviedb.org/3/movie/top_rated?api_key=${process.env.API_KEY}&language=en-US&page=1`
-      )
-        .then((res) => {
-          return res.json();
-        })
-        .then((f) => {
-          setMovies(f.results);
-        });
-    }
+    fetch(`/api/getMovies/${type}`)
+      .then((res) => {
+        return res.json();
+      })
+      .then((f) => {
+        setMovies(f.results);
+      });
   });
   return (
     <div>
