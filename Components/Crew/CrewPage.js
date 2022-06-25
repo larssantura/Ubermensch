@@ -68,7 +68,7 @@ const CrewPage = ({ id }) => {
             icon="bi:arrow-down-circle-fill"
             width="60"
             height="60"
-            color="#00bceb"
+            color="#003382"
             cursor="pointer"
           />
         ) : null}
@@ -77,7 +77,7 @@ const CrewPage = ({ id }) => {
             icon="bi:arrow-up-circle-fill"
             width="60"
             height="60"
-            color="#00bceb"
+            color="#003382"
             cursor="pointer"
           />
         ) : null}

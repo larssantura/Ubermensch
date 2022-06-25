@@ -121,7 +121,7 @@ const Movie = ({ movie, simillarMovies, err }) => {
                     color="green.200"
                     fontSize={20}
                     fontWeight="500"
-                  >{`${movie.vote_average}/10`}</Text>
+                  >{`${movie.vote_average?.toFixed(1)}/10`}</Text>
                 </Box>
               </Box>
             </Box>

@@ -1,3 +1,6 @@
+import { useState } from "react";
+import { useEffect } from "react";
+
 const cleanPercentage = (percentage) => {
   const tooLow = !Number.isFinite(+percentage) || percentage < 0;
   const tooHigh = percentage > 100;
@@ -5,7 +8,11 @@ const cleanPercentage = (percentage) => {
 };
 
 const Circle = ({ colour, pct }) => {
-  const r = 70;
+  const [width, setWidth] = useState(null);
+  useEffect(() => {
+    setWidth(window.innerWidth);
+  });
+  const r = width > 600 ? 70 : 60;
   const circ = 2 * Math.PI * r;
   const strokePct = ((100 - pct) * circ) / 100;
   return (

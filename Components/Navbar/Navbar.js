@@ -5,6 +5,7 @@ import {
   BreadcrumbLink,
   Flex,
   FormLabel,
+  Image,
   Input,
   LinkBox,
   Text,
@@ -54,7 +55,7 @@ const Navbar = () => {
         height={["45px", "45px", "50px", "50px"]}
         display="flex"
         flexDirection="row"
-        backgroundColor="#121212"
+        backgroundColor="black"
         color="white"
         fontSize="15"
         justifyContent="space-between"
@@ -70,14 +71,23 @@ const Navbar = () => {
         <Box p="5px" fontWeight={500} transition="1s">
           <Box display={["none", "none", "flex", "flex"]}>
             <Link href="/" passHref>
-              <a>
-                <span>Ü</span>
-                bermensch
-              </a>
+              <Image
+                src={"/Images/Logo.svg"}
+                width="90px"
+                alt="logo"
+                cursor="pointer"
+              />
             </Link>
           </Box>
-          <Box color="#0088a9" fontSize={25} display={["", "", "none", "none"]}>
-            <Link href="/">Ü</Link>
+          <Box color="#003382" fontSize={25} display={["", "", "none", "none"]}>
+            <Link href="/" passHref>
+              <Image
+                src="/Images/favicon.svg"
+                alt="logo"
+                width="30px"
+                cursor="pointer"
+              />
+            </Link>
           </Box>
         </Box>
         <Box>
@@ -90,12 +100,12 @@ const Navbar = () => {
             translateX="-50%"
             translateY="-50%"
             variant="filled"
-            backgroundColor="#242424"
+            backgroundColor="#121212"
             _hover={{
               backgroundColor: "#303030",
             }}
             _focus={{
-              border: "1px solid #0088a9",
+              border: "1px solid #003382",
             }}
             width={[140, 200, 200, 200, 300]}
             size="sm"
@@ -124,7 +134,7 @@ const Navbar = () => {
             paddingBottom="1"
             backgroundColor={
               path !== "top_rated" && Router.pathname !== "/about"
-                ? "#0088a9"
+                ? "#003382"
                 : "#121212"
             }
             paddingRight="3"
@@ -134,9 +144,9 @@ const Navbar = () => {
               path !== "top_rated" && Router.pathname !== "/about"
                 ? {
                     backgroundColor: "#121212",
-                    outline: "2px solid #0088a9",
+                    outline: "2px solid #003382",
                   }
-                : { backgroundColor: "#0088a9" }
+                : { backgroundColor: "#003382" }
             }
           >
             <Link href={"/Discover/trending"}>Trending</Link>
@@ -148,7 +158,7 @@ const Navbar = () => {
             paddingRight="3"
             paddingLeft="3"
             borderRadius="25"
-            backgroundColor={path === "top_rated" ? "#0088a9" : ""}
+            backgroundColor={path === "top_rated" ? "#003382" : ""}
             marginRight={2}
             onMouseOver={() => {
               setHovered(true);
@@ -158,8 +168,8 @@ const Navbar = () => {
             }}
             _hover={
               path === "top_rated"
-                ? { outline: "2px solid #0088a9", backgroundColor: "#121212" }
-                : { backgroundColor: "#0088a9" }
+                ? { outline: "2px solid #003382", backgroundColor: "#121212" }
+                : { backgroundColor: "#003382" }
             }
           >
             <Link href="/Discover/top_rated">Heighest rated</Link>
@@ -170,7 +180,7 @@ const Navbar = () => {
             paddingBottom="1"
             backgroundColor={
               path === undefined && Router.pathname === "/about"
-                ? "#0088a9"
+                ? "#003382"
                 : ""
             }
             paddingRight="3"
@@ -184,8 +194,8 @@ const Navbar = () => {
             }}
             _hover={
               Router.pathname === "/about"
-                ? { outline: "2px solid #0088a9", backgroundColor: "#121212" }
-                : { backgroundColor: "#0088a9" }
+                ? { outline: "2px solid #003382", backgroundColor: "#121212" }
+                : { backgroundColor: "#003382" }
             }
           >
             <Link href="/about">About</Link>
@@ -247,7 +257,7 @@ const Navbar = () => {
               paddingBottom="1"
               backgroundColor={
                 path !== "top_rated" && Router.pathname !== "/about"
-                  ? "#0088a9"
+                  ? "#003382"
                   : ""
               }
               paddingRight="3"
@@ -257,9 +267,9 @@ const Navbar = () => {
                 path !== "top_rated" && Router.pathname !== "/about"
                   ? {
                       backgroundColor: "black",
-                      outline: "2px solid #0088a9",
+                      outline: "2px solid #003382",
                     }
-                  : { backgroundColor: "#0088a9" }
+                  : { backgroundColor: "#003382" }
               }
             >
               <Link href={"/Discover/trending"}>Trending</Link>
@@ -272,7 +282,7 @@ const Navbar = () => {
               paddingLeft="3"
               borderRadius="25"
               mb={3}
-              backgroundColor={path === "top_rated" ? "#0088a9" : ""}
+              backgroundColor={path === "top_rated" ? "#003382" : ""}
               onMouseOver={() => {
                 setHovered(true);
               }}
@@ -281,8 +291,8 @@ const Navbar = () => {
               }}
               _hover={
                 path === "top_rated"
-                  ? { outline: "2px solid #0088a9", backgroundColor: "black" }
-                  : { backgroundColor: "#0088a9" }
+                  ? { outline: "2px solid #003382", backgroundColor: "black" }
+                  : { backgroundColor: "#003382" }
               }
             >
               <Link href="/Discover/top_rated">Heighest rated</Link>
@@ -293,7 +303,7 @@ const Navbar = () => {
               paddingBottom="1"
               backgroundColor={
                 path === undefined && Router.pathname === "/about"
-                  ? "#0088a9"
+                  ? "#003382"
                   : ""
               }
               paddingRight="3"
@@ -307,8 +317,8 @@ const Navbar = () => {
               }}
               _hover={
                 Router.pathname === "/about"
-                  ? { outline: "2px solid #0088a9", backgroundColor: "black" }
-                  : { backgroundColor: "#0088a9" }
+                  ? { outline: "2px solid #003382", backgroundColor: "black" }
+                  : { backgroundColor: "#003382" }
               }
             >
               <Link href="/about">About</Link>

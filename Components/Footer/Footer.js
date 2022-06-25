@@ -1,4 +1,4 @@
-import { Box, Flex, List, Text } from "@chakra-ui/react";
+import { Box, Flex, Image, List, Text } from "@chakra-ui/react";
 import Link from "next/link";
 import React from "react";
 import Spinner from "../Spinner/Spinner";
@@ -17,9 +17,13 @@ const Footer = () => {
       textAlign="center"
     >
       <Link href="/" passHref>
-        <Text color="#00bceb" fontSize={[40]} mb={10} pt={5} cursor="pointer">
-          Ü
-        </Text>
+        <Image
+          src="/images/Logo.svg"
+          width="250px"
+          m="30px 0 "
+          alt="logo"
+          cursor="pointer"
+        />
       </Link>
 
       <Box>
@@ -50,7 +54,7 @@ const Footer = () => {
             borderRight="1px solid grey"
             _hover={{ color: "#00bceb" }}
           >
-            <Link href={"/Discover/top_rated/1"}>Heighest rated movies</Link>
+            <Link href={"/Discover/top_rated/1"}>Highest rated movies</Link>
           </Box>
           <Box
             padding={5}
@@ -69,12 +73,27 @@ const Footer = () => {
       <Box
         color="white"
         alignItems="center"
-        justifyContent="center"
         display="flex"
-        mt={10}
-        pb={5}
+        justifyContent="space-around"
+        width="400px"
+        height="20vh"
       >
-        <Box marginRight={10}>
+        <Text>
+          Designed and developed by
+          <Link href="http://larssantura.com" passHref>
+            <Text
+              fontSize="1.5rem"
+              _hover={{
+                bgColor: "#003382",
+                cursor: "pointer",
+                transition: "0.5s",
+              }}
+            >
+              Lars Santura
+            </Text>
+          </Link>
+        </Text>
+        <Box>
           <Link href="https://github.com/lsantura" passHref>
             <Icon
               icon="akar-icons:github-fill"
@@ -85,12 +104,21 @@ const Footer = () => {
             />
           </Link>
         </Box>
-        <Link href="https://wa.me/201098282338" passHref>
+        <Link href="https://www.linkedin.com/in/larssantura/" passHref>
           <Icon
-            icon="akar-icons:whatsapp-fill"
+            icon="akar-icons:linkedin-box-fill"
             color="#eee"
             width="30"
             height="30"
+            cursor="pointer"
+          />
+        </Link>
+        <Link href="https://www.larssantura.com/" passHref>
+          <Icon
+            icon="mdi:web"
+            color="#eee"
+            width="35"
+            height="35"
             cursor="pointer"
           />
         </Link>

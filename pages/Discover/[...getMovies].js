@@ -53,7 +53,7 @@ const Search = ({ data, num, type, err }) => {
                 fontSize={25}
                 cursor="pointer"
                 backgroundColor={
-                  type === "top_rated" && num == 0 ? "#00bceb" : ""
+                  type === "top_rated" && num == 0 ? "#003382" : ""
                 }
                 borderRadius="50"
                 padding="0 10px"
@@ -68,7 +68,7 @@ const Search = ({ data, num, type, err }) => {
                 padding="0 10px"
                 cursor="pointer"
                 borderRadius="50"
-                backgroundColor={num == 2 ? "#00bceb" : ""}
+                backgroundColor={num == 2 ? "#003382" : ""}
               >
                 2
               </Text>
@@ -80,7 +80,7 @@ const Search = ({ data, num, type, err }) => {
                 fontSize={25}
                 cursor="pointer"
                 borderRadius="50"
-                backgroundColor={num == 3 ? "#00bceb" : ""}
+                backgroundColor={num == 3 ? "#003382" : ""}
               >
                 3
               </Text>
@@ -92,7 +92,7 @@ const Search = ({ data, num, type, err }) => {
                 padding="0 10px"
                 cursor="pointer"
                 borderRadius="50"
-                backgroundColor={num == 4 ? "#00bceb" : ""}
+                backgroundColor={num == 4 ? "#003382" : ""}
               >
                 4
               </Text>
@@ -104,7 +104,7 @@ const Search = ({ data, num, type, err }) => {
                 fontSize={25}
                 cursor="pointer"
                 borderRadius="50"
-                backgroundColor={num == 5 ? "#00bceb" : ""}
+                backgroundColor={num == 5 ? "#003382" : ""}
               >
                 5
               </Text>

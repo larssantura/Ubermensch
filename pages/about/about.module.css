@@ -5,11 +5,4 @@
 }
 .container {
   font-family: "sfPro";
-
-  background: linear-gradient(
-    90deg,
-    rgba(0, 0, 0, 0.507) 0%,
-    rgba(105, 0, 181, 1) 24%,
-    rgba(1, 5, 53, 1) 100%
-  );
 }

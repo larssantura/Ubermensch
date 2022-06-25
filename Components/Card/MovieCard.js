@@ -22,7 +22,7 @@ const MovieCard = ({ type, name, character, image, title, id, rate }) => {
       <Box
         display="inline-flex"
         flexDirection="column"
-        width={225}
+        width={[170, 200, 225, 225]}
         onClick={redirect}
         cursor="pointer"
         justifyContent="center"

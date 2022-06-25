@@ -8,7 +8,6 @@
   src: url("/fonts/sfProMd.woff") format("woff");
   font-weight: 500;
 }
-@import url("https://fonts.googleapis.com/css2?family=Bangers&family=Oleo+Script:wght@700&display=swap");
 * {
   font-family: "sfPro", sans-serif;
 }
@@ -18,9 +17,12 @@ body {
   padding: 0;
   margin: 0;
   font-weight: 300;
-  background-color: black !important;
+  background-color: rgb(0, 0, 0) !important;
   overflow-x: hidden !important;
   scroll-behavior: smooth !important;
+}
+#canvas {
+  height: 100vh !important;
 }
 .fixed {
   background-attachment: fixed;
@@ -58,7 +60,7 @@ a {
   transform: translateY(-50%);
 }
 .right-arrow:active {
-  color: #0088a9;
+  color: #003382;
 }
 .left-arrow {
   cursor: pointer;
@@ -69,7 +71,7 @@ a {
   transform: translateY(-50%);
 }
 .left-arrow:active {
-  color: #0088a9;
+  color: #003382;
 }
 .center {
   left: 50%;
@@ -116,18 +118,51 @@ span {
   background-color: #303030;
 }
 .gradient {
-  background: linear-gradient(
-    227deg,
-    rgba(0, 188, 235, 1) 0%,
-    rgba(0, 109, 136, 1) 38%,
-    rgba(0, 0, 0, 1) 100%
-  );
+  text-align: center;
   text-shadow: 0 0 10px rgb(0, 0, 0);
+}
+.gradient::after {
+  content: "";
+  width: 300px;
+  background-color: #003382;
+  height: 8px;
+  display: block;
+  margin: auto;
+  border-radius: 50%;
 }
 .nobar ::-webkit-scrollbar {
   height: 0 !important;
   width: 0;
 }
 ::selection {
-  background-color: #0088a9;
+  background-color: #003382;
+}
+.slick-next {
+  /* background-color: red !important; */
+  background-color: rgb(0, 0, 0) !important;
+  width: 50px !important;
+  height: 340px !important;
+  margin-right: 25px;
+}
+.slick-prev {
+  /* background-color: red !important; */
+  width: 50px !important;
+  height: 350px !important;
+  z-index: 90;
+
+  color: white !important;
+  margin-left: 25px !important;
+  background-color: rgb(0, 0, 0) !important;
+}
+.slick-prev:before,
+.slick-next:before {
+  opacity: 1 !important;
+  color: white !important;
+  font-size: 30px !important;
+}
+.slick-slider {
+  padding: 0 40px !important;
+}
+.slick-dots li button:before {
+  color: white !important;
 }

@@ -6,7 +6,7 @@ import { Icon } from "@iconify/react";
 import MovieCard from "../Card/MovieCard";
 import SomethingWentWrong from "../../pages/SomethingWentWrong";
 
-const TrendingMoviesPage = ({ type }) => {
+const MoviesPage = ({ type }) => {
   const [movies, setMovies] = useState();
   useEffect(() => {
     if (type === "trending") {
@@ -45,6 +45,7 @@ const TrendingMoviesPage = ({ type }) => {
         width={type === "trending" ? "max-content" : "100vw"}
         position="relative"
         padding="20 0"
+        backgroundImage="url(Images/stars.png)"
         pb={type === "top_rated" ? "10vh" : ""}
       >
         {movies
@@ -107,4 +108,4 @@ const TrendingMoviesPage = ({ type }) => {
   );
 };
 
-export default TrendingMoviesPage;
+export default MoviesPage;
