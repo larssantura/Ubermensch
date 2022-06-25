@@ -17,7 +17,7 @@ const HeaderHtml = () => {
       p=" 0 4rem"
       textAlign={["center", "center", "left", "left"]}
     >
-      <Text color="white" fontSize={["6rem", "4rem", "8rem", "8rem"]}>
+      <Text color="white" fontSize={["5rem", "4rem", "8rem", "8rem"]}>
         Pluton
       </Text>
       <Text color="white" fontSize="1.8rem">
