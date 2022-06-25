@@ -18,7 +18,7 @@ const Footer = () => {
     >
       <Link href="/" passHref>
         <Image
-          src="/images/Logo.svg"
+          src="/Images/Logo.svg"
           width="250px"
           m="30px 0 "
           alt="logo"

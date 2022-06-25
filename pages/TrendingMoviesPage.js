@@ -67,7 +67,7 @@ const MoviesPage = ({ type }) => {
   };
   if (type === "trending") {
     return (
-      <Box backgroundImage="url(/Images/stars.png)">
+      <Box backgroundImage="url(/Images/stars.PNG)">
         <Slider {...settings}>
           {movies
             ? movies.map((movie) => {
