@@ -77,7 +77,14 @@ const Movie = ({ movie, simillarMovies, err }) => {
                 minHeight="max-content"
                 backgroundColor="#121212"
                 display={"flex"}
-                marginLeft={1000}
+                marginLeft={[
+                  "1000px",
+                  "1000px",
+                  "1000px",
+                  "1000px",
+                  "1000px",
+                  "1050px",
+                ]}
                 mb={20}
                 mt={50}
                 top="120px"

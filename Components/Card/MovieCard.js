@@ -44,7 +44,7 @@ const MovieCard = ({ type, name, character, image, title, id, rate }) => {
         >
           <Spinner />
           {type !== "cast" ? (
-            <Box display={hovered ? "flex" : "none"} transition="2s">
+            <Box display={hovered ? "block" : "none"} transition="2s">
               <Circle rate={rate} />
             </Box>
           ) : (
@@ -55,6 +55,7 @@ const MovieCard = ({ type, name, character, image, title, id, rate }) => {
               textAlign="center"
               flexDir="column"
               display={hovered ? "flex" : "none"}
+              bgColor="red"
             >
               <Text
                 position="absolute"

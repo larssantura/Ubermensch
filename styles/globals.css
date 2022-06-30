@@ -10,8 +10,11 @@
 }
 * {
   font-family: "sfPro", sans-serif;
+  /* transform: scale(2) !important; */
 }
-
+body {
+  zoom: 3;
+}
 html,
 body {
   padding: 0;
