@@ -55,7 +55,7 @@ const MovieCard = ({ type, name, character, image, title, id, rate }) => {
               textAlign="center"
               flexDir="column"
               display={hovered ? "flex" : "none"}
-              bgColor="red"
+            
             >
               <Text
                 position="absolute"
